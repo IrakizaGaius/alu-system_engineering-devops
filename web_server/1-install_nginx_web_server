@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-# Install Nginx
-apt-get update
-apt-get install -y nginx
+#Installing Nginx on Ubuntu
+#Nginx is listening on port 80
+#The GET request should return a page containing "Holberton School"
 
-# Remove default Nginx files
-sudo rm -f /usr/share/nginx/html/index.html
+sudo apt-get update && upgrade
+sudo apt-get install nginx -y
 
-# Configure Nginx to listen on port 80 and return "Holberton School" at the root
-sudo echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
-
-# Restart Nginx without using systemctl
+#Create a directory called html inside your nginx server
+sudo mkdir /var/www/html
+#Create a file inside that directory called index.html
+sudo touch /var/www/html/index.html
+#Display your message then
+sudo echo "Holberton School" > /var/www/html/index.html
 sudo service nginx restart
