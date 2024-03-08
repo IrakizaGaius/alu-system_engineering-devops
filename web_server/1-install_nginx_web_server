@@ -4,10 +4,10 @@ apt-get update
 apt-get install -y nginx
 
 # Remove default Nginx files
-rm -f /usr/share/nginx/html/index.html
+sudo rm -f /usr/share/nginx/html/index.html
 
 # Configure Nginx to listen on port 80 and return "Holberton School" at the root
-echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
+sudo echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
 
 # Restart Nginx without using systemctl
 sudo service nginx restart
