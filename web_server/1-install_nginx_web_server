@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install Nginx
 apt-get update
@@ -8,4 +8,4 @@ apt-get install -y nginx
 echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
 
 # Restart Nginx without using systemctl
-service nginx restart
+sudo service nginx restart
